@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>photos - Ruths website</title>
+    
+    <style>
+        /* שומרים על העיצוב הראשי של האתר */
+        body {
+            background-color: rgb(243, 91, 3);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px; /* תוחם את הגלריה כדי שהתמונות לא יהיו ענקיות מדי במסכים גדולים */
+            margin: 0 auto;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        /* --- עיצוב הגלריה עצמה --- */
+        .gallery {
+            display: flex;
+            flex-direction: column; /* מסדר את התמונות אחת מתחת לשנייה */
+            gap: 30px; /* רווח גדול בין ציור לציור */
+        }
+
+        .image-frame {
+            border: 1px solid black; /* מסגרת אישית לכל תמונה */
+            padding: 10px; /* קצת אוויר בין המסגרת לתמונה */
+            background-color: rgb(243, 91, 3); /* שומר על הרקע הירוק בפנים */
+        }
+
+        .image-frame img {
+            width: 100%; /* התמונה תתפוס את כל רוחב המסגרת */
+            height: auto; /* שומר על הפרופורציות של הציור */
+            display: block; /* מונע רווחים לבנים מיותרים בתחתית התמונה */
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 28px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        .back-link {
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header class="box">
+        <h1>Photos</h1>
+    </header>
+
+    <div class="gallery">
+        
+        <div class="image-frame">
+            <img src="photos/img01.png" alt="">
+        </div>
+        
+        <div class="image-frame">
+            <img src="photos/img2.JPG" alt="Drawing 2">
+        </div>
+        
+        <div class="image-frame">
+            <img src="photos/img3.JPG" alt="Drawing 3">
+        </div>
+
+         <div class="image-frame">
+            <img src="photos/000011.JPG" alt="Drawing 6">
+        </div>
+
+    </div>
+
+    <div class="box back-link">
+        <a href="index.html">← back to home page</a>
+    </div>
+
+</div>
+
+</body>
+</html>

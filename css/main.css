@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ruths website</title>
+    
+    <style>
+        /* --- הגדרות כלליות --- */
+        body {
+            background-color: rgb(25, 226, 48); /* הירוק שבחרת */
+            font-family: 'Courier New', Courier, monospace; /* הפונט מהסקיצה */
+            color: white; /* טקסט לבן */
+            margin: 0;
+            padding: 20px; /* מרווח שחור סביב כל האתר */
+        }
+
+        /* קונטיינר ראשי שמסדר את כל התיבות אחת מתחת לשנייה */
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* הרווח בין התיבות השונות */
+        }
+
+        /* --- עיצוב התיבות --- */
+        .box {
+            border: 1px solid black; /* המסגרת השחורה הדקה */
+            padding: 20px; /* מרווח פנימי בתוך כל תיבה */
+        }
+
+        /* --- אזור האמצע (תפריט + תמונה) --- */
+        .middle-section {
+            display: flex;
+            gap: 10px; /* רווח בין קוביית התפריט לקוביית התמונה */
+        }
+
+        .nav-links {
+            flex: 1; /* תופס חצי מהרוחב */
+        }
+
+        .image-box {
+            flex: 1; /* תופס את החצי השני */
+            padding: 0; /* מאפסים את הריווח כדי שהתמונה תמלא הכל */
+            display: flex;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* מוודא שהתמונה תשב טוב בתוך התיבה */
+        }
+
+        /* --- עיצוב טקסט ורשימות --- */
+        h1, h2 {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        h1 { font-size: 28px; }
+        h2 { font-size: 22px; }
+
+        ul {
+            list-style-type: none; /* מעלים את הנקודות המכוערות */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* ריווח בין שורות התפריט */
+            font-size: 20px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none; /* מוריד קו תחתון מקישורים */
+        }
+
+        a:hover {
+            color: black; /* כשעוברים עם העכבר זה יהפוך לשחור */
+        }
+
+        /* --- סרגל קישורים תחתון --- */
+        .bottom-links {
+            display: flex;
+            justify-content: space-between; /* מפזר את המילים שווה בשווה על השורה */
+            align-items: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header class="box">
+        <h1>hi, this is Ruth</h1>
+    </header>
+
+    <div class="middle-section">
+        <nav class="box nav-links">
+            <ul>
+                <li><a href="#">drawing</a></li>
+                <li><a href="#">comics</a></li>
+                <li><a href="#">animations</a></li>
+                <li><a href="#">inspiration</a></li>
+                <li><a href="#">sketch book</a></li>
+                <li><a href="#">photos</a></li>
+            </ul>
+        </nav>
+        
+        <div class="box image-box">
+            <img src="bike.png" alt="Bike view">
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>portfolio 2025</h2>
+    </div>
+    
+    <div class="box">
+        <h2>fav song</h2>
+    </div>
+    
+    <div class="box">
+        <h2>me</h2>
+    </div>
+
+    <footer class="box bottom-links">
+        <a href="#">instagram</a>
+        <a href="#">facebook</a>
+        <a href="#">youtube</a>
+        <a href="#">gmail</a>
+        <a href="#">google maps</a>
+        <span>+972 587141201</span>
+    </footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ruths website</title>
+    
+    <style>
+        /* --- הגדרות כלליות --- */
+        body {
+            background-color: rgb(0, 205, 18); /* הירוק שבחרת */
+            font-family: 'Courier New', Courier, monospace; /* הפונט מהסקיצה */
+            color: white; /* טקסט לבן */
+            margin: 0;
+            padding: 20px; /* מרווח שחור סביב כל האתר */
+        }
+
+        /* קונטיינר ראשי שמסדר את כל התיבות אחת מתחת לשנייה */
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* הרווח בין התיבות השונות */
+        }
+
+        /* --- עיצוב התיבות --- */
+        .box {
+            border: 1px solid black; /* המסגרת השחורה הדקה */
+            padding: 20px; /* מרווח פנימי בתוך כל תיבה */
+        }
+
+        /* --- אזור האמצע (תפריט + תמונה) --- */
+        .middle-section {
+            display: flex;
+            gap: 10px; /* רווח בין קוביית התפריט לקוביית התמונה */
+        }
+
+        .nav-links {
+            flex: 1; /* תופס חצי מהרוחב */
+        }
+
+        .image-box {
+            flex: 1; /* תופס את החצי השני */
+            padding: 0; /* מאפסים את הריווח כדי שהתמונה תמלא הכל */
+            display: flex;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* מוודא שהתמונה תשב טוב בתוך התיבה */
+        }
+
+        /* --- עיצוב טקסט ורשימות --- */
+        h1, h2 {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        h1 { font-size: 28px; }
+        h2 { font-size: 22px; }
+
+        ul {
+            list-style-type: none; /* מעלים את הנקודות המכוערות */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* ריווח בין שורות התפריט */
+            font-size: 25px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none; /* מוריד קו תחתון מקישורים */
+        }
+
+        a:hover {
+            color: black; /* כשעוברים עם העכבר זה יהפוך לשחור */
+        }
+
+        /* --- סרגל קישורים תחתון --- */
+        .bottom-links {
+            display: flex;
+            justify-content: space-between; /* מפזר את המילים שווה בשווה על השורה */
+            align-items: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header class="box">
+        <h1>hi, this is Ruth</h1>
+    </header>
+
+    <div class="middle-section">
+        <nav class="box nav-links">
+            <ul>
+                <li><a href="file:///Users/ruthavni/Desktop/ruths-website/drawing.html">drawings</a></li>
+                <li><a href="file:///Users/ruthavni/Desktop/ruths-website/inspiration.html/inspiration.html">inspirations</a></li>
+                <li><a href="Main Grid.mp4">animation</a></li>
+                <li><a href="file:///Users/ruthavni/Desktop/ruths-website/photos.html">photos</a></li>
+                <li><a href="Raman Djafari’s unpredictable approach to animation makes for a hypnotic and emotive film.gif">A gif i like</a></li>
+                <li><a href="file:///Users/ruthavni/Desktop/ruths-website/video.html">video</a></li>
+                <li><a href="https://www.youtube.com/watch?v=qage_dJcIBE">all time favorite</a></li>
+                <li><a href="https://open.spotify.com/user/31sf2o472vwkwgiduqfyi4dtuzh4?si=f8fe0c79c8764ab1">spotify</a></li>
+            </ul>
+        </nav>
+        
+        <div class="box image-box">
+            <img src="bike2.png" alt="Bike view">
+        </div>
+    </div>
+
+    <div class="box">
+        <h2><a href="https://drive.google.com/file/d/1OxcU4UxLH5wNzetJ8RHp97HMnLKRi_sL/view?usp=sharing">portfolio 2025</a></h2>
+    </div>
+    
+    <div class="box">
+        <h2> <a href="https://youtu.be/weJjQYvjIaw?si=MP5-jxDTKoa96Dx7">fav song</a></h2>
+    </div>
+
+    <footer class="box bottom-links">
+        <a href="https://www.instagram.com/ruth_avni/">instagram</a>
+        <a href="https://www.facebook.com/ruth.avni.7">facebook</a>
+        <a href="https://www.youtube.com/@ruthavni">youtube</a> 
+        <a href="https://maps.app.goo.gl/S1UhioG5GALrMq1k7">google maps</a>
+       <a href="#" onclick="copyToClipboard(event, 'ruthavni1412@gmail.com')">ruthavni1412@gmail.com</a>
+        <a href="#" onclick="copyToClipboard(event, '+972 587141201')">+972 587141201</a>
+    </footer>
+
+</div>
+<script>
+    function copyToClipboard(event, textToCopy) {
+        event.preventDefault(); // מונע מהדף "לקפוץ" למעלה כשלוחצים על הקישור
+        
+        // הפקודה שמעתיקה ללוח
+        navigator.clipboard.writeText(textToCopy).then(function() {
+            // שומרים את הטקסט המקורי (למשל "gmail" או המספר)
+            let originalText = event.target.innerText;
+            
+            // משנים את הטקסט לחיווי שההעתקה הצליחה
+            event.target.innerText = "copied!";
+            
+            // מחזירים את הטקסט המקורי אחרי 2 שניות (2000 מילישניות)
+            setTimeout(function() {
+                event.target.innerText = originalText;
+            }, 2000);
+        }).catch(function() {
+            alert("Oops! couldn't copy."); // למקרה שמשהו משתבש
+        });
+    }
+</script>
+
+</body>
+</html>

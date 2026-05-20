@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>a video by Ruth - Ruths website</title>
+    
+    <style>
+        /* שומרים על העיצוב המוכר של האתר */
+        body {
+            background-color: rgb(228, 0, 0);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px; /* רוחב האתר הכללי */
+            margin: 0 auto;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 28px;
+        }
+
+        /* --- עיצוב אזור הווידאו (מעודכן) --- */
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* ממורכז לאמצע */
+            gap: 20px;
+        }
+
+        /* עיצוב לקונטיינר של התמונה הלחיצה (פה התיקון!) */
+        .video-thumbnail {
+            display: block; /* חשוב כדי ש-max-width יעבוד על תג <A> */
+            max-width: 800px; /* קביעת גודל מקסימלי לתמונה - שחקי עם זה */
+            width: 100%; /* כדי שתהיה רספונסיבית במובייל */
+            margin: 0 auto; /* מרכוז */
+            text-decoration: none; /* מסיר קו תחתון אם יש */
+        }
+
+        .video-thumbnail img {
+            width: 100%; /* ממלאת את התג <A> */
+            height: auto;
+            border: 1px solid black; /* מסגרת לתמונה עצמה שתתאים לוייב */
+            transition: opacity 0.3s;
+            display: block; /* מונע רווחים מיותרים בתחתית התמונה */
+        }
+
+        .video-thumbnail img:hover {
+            opacity: 0.8; /* אפקט קטן שנותן תחושה שזה לחיץ כשהעכבר עובר מעל */
+        }
+
+        /* עיצוב לכפתור הקישור */
+        .watch-link {
+            border: 1px solid black;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .watch-link:hover {
+            background-color: black; /* הכפתור מושחר כשעוברים עליו */
+            color: rgb(25, 226, 48); /* הטקסט הופך לירוק */
+        }
+
+        /* --- כפתור חזרה --- */
+        .back-link {
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .back-link a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header class="box">
+        <h1>A mini doco by Ruth and Itai</h1>
+    </header>
+
+    <div class="box video-section">
+        
+        <a href="https://youtu.be/H38FOwdh9AQ" target="_blank" class="video-thumbnail">
+            <img src="itai.png" alt="Click to watch on YouTube">
+        </a>
+
+        <a href="https://youtu.be/H38FOwdh9AQ" target="_blank" class="watch-link">
+            ► watch on youtube
+        </a>
+
+    </div>
+
+    <div class="box back-link">
+        <a href="index.html">← back to home page</a>
+    </div>
+
+</div>
+
+</body>
+</html>

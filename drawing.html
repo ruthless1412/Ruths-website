@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sketchbooks - Ruths website</title>
+    
+    <style>
+        /* --- עיצוב כללי --- */
+        body {
+            background-color: rgb(0, 0, 0); /* הסגול שבחרת */
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px; /* רווח נעים בין סדרה לסדרה */
+            width: 100%; /* נותן לתוכן להתפרס על כל המסך */
+            box-sizing: border-box; 
+        }
+
+        /* --- מסגרת עדינה רק לכותרות --- */
+        /* --- מסגרת עדינה ומרכוז לכותרות --- */
+        h1, h2 {
+            margin: 0 auto 10px auto; /* ה-auto מימין ושמאל ממורכז אותן לאמצע */
+            font-weight: normal;
+            color: rgb(255, 255, 255);
+            display: table; /* שומר על המסגרת צמודה לטקסט */
+            padding: 5px 15px;
+            border: 1px solid black;
+            text-align: center; /* ממורכז את הטקסט עצמו */
+        }
+
+        h1 { font-size: 24px; }
+        h2 { font-size: 20px; }
+
+        /* --- כפתור חזרה - מרכוז --- */
+        .back-link {
+            font-size: 16px;
+            text-align: center; /* שונה לאמצע במקום לשמאל */
+            margin-top: 20px;
+        }
+        
+        /* --- כפתור חזרה - מסגרת לבנה --- */
+        .back-link a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid white; /* המסגרת שונתה ללבן */
+            padding: 5px 15px;
+        }
+
+        .back-link a:hover {
+            color: rgb(0, 0, 0);
+            background-color: white;
+        }
+
+        /* --- עיצוב אזור הגלילה (מסגרת עדינה לכלל הציורים) --- */
+        .slider-wrapper {
+            display: flex;
+            align-items: center;
+            border: 1px solid black; /* המסגרת העדינה שעוטפת את כל הציורים יחד */
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .slider-button {
+            background: none;
+            border: none;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            transition: color 0.2s;
+        }
+
+        .slider-button:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        /* -- החלף את אלו בקובץ ה-CSS שלך -- */
+
+.scroll-area {
+    /* מוודא שהתמונות מיושרות לתחתית (למטה) */
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    flex: 1;
+    scrollbar-width: none;
+    align-items: flex-end; /* !!! זה המפתח ליישור למטה !!! */
+}
+
+.image-frame {
+    /* מוודא שהמסגרת לא חוסמת את התמונה */
+    display: inline-block;
+    flex: 0 0 auto; /* מונע התכווצות */
+    padding: 5px;
+    width: auto; /* !!! חשוב: מסירים כל רוחב קבוע !!! */
+}
+
+.image-frame img {
+    /* קביעת הגובה האחיד. שחקי עם המספר (למשל 200px או 300px) כדי לשלוט בגודל */
+    height: 250px; /* !!! זה קובע את הגובה האחיד לכולן !!! */
+    width: auto; /* הולך לפי הפרופורציה של התמונה המקורית */
+    display: block;
+    /* המסגרת השחורה העדינה סביב כל ציור (כמו בסקיצה שלך) */
+    border: 1px solid black; 
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div>
+        <h1>Sketchbooks & Diaries</h1>
+    </div>
+
+    <div>
+        <h2>Berlin</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-area">
+                <div class="image-frame"><img src="drawing/BERLIN-1.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/BERLIN-2.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/BERLIN-3.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/BERLIN-4.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/BERLIN-5.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/BERLIN-6.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/BERLIN-7.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/BERLIN-8.png" alt="sketch"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>India</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-area">
+                <div class="image-frame"><img src="drawing/צבעי מים.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/painting.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/gaushela.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/breakfast hygiene.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/mud pool.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/IMG_2742.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/Untitled_Artwork (2).png" alt="sketch"></div>
+            </div>
+        </div>
+    </div>
+
+ <div>
+     <h2>Nepal</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-area">
+                <div class="image-frame"><img src="drawing/מומו.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/נוף מופשט.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/אסטם טושים.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/sisters.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/Untitled_Artwork (1).png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/IMG_2747.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/IMG_2745.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/IMG_2743.png" alt="sketch"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>comics</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-area">
+                <div class="image-frame"><img src="drawing/דאמפוס.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/אולר.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/pemsees.png" alt="sketch"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Chanuka</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-area">
+                <div class="image-frame"><img src="drawing/חנוכה-1.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חנוכה-2.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חנוכה-3.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חנוכה-4.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חנוכה-5.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חנוכה-6.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חנוכה-7.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חנוכה-8.png" alt="sketch"></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>others</h2>
+        <div class="slider-wrapper">
+            <div class="scroll-area">
+                <div class="image-frame"><img src="drawing/סמר2.jpg" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/Inktober.png" alt="sketch"></div>
+                <div class="image-frame"><img src="drawing/חלות.png" alt="sketch"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="index.html">← back to home</a>
+    </div>
+
+</div>
+
+<script>
+    function slide(button, direction) {
+        const wrapper = button.parentElement;
+        const scrollArea = wrapper.querySelector('.scroll-area');
+        const scrollAmount = direction * 270; 
+        scrollArea.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
